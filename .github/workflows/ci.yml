@@ -38,6 +38,7 @@ jobs:
     strategy:
       matrix:
         backend:
+          - default
           - cpu
           - gpu
     steps:
@@ -60,7 +61,7 @@ jobs:
         images: ghcr.io/${{ github.repository }}
         flavor: |
           suffix=${{ matrix.backend }}
-          ${{ matrix.backend == 'cpu' && 'suffix=' || '' }}
+          ${{ matrix.backend == 'default' && 'suffix=' || format('suffix=-{0}', matrix.backend) }}
     - name: 🚀 Build and push Docker image
       uses: docker/build-push-action@v6
       with:
