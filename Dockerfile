@@ -1,4 +1,4 @@
-FROM rayproject/ray:2.36.0-cpu
+FROM rayproject/ray:2.37.0-cpu
 
 # Install Conda packages.
 COPY environment.yml /tmp/
