@@ -11,6 +11,7 @@ jobs:
     strategy:
       matrix:
         backend:
+          - default
           - cpu
           - gpu
     steps:
@@ -24,7 +25,7 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         context: .
-        target: ${{ matrix.backend }}
+        target: ${{ matrix.backend == 'default' && '' || matrix.backend }}
         push: false
   docker-publish:
     name: 🚀 Publish Docker image
@@ -66,7 +67,7 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         context: .
-        target: ${{ matrix.backend == 'default' && 'cpu' || matrix.backend }}
+        target: ${{ matrix.backend == 'default' && '' || matrix.backend }}
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
         push: true
