@@ -1,0 +1,8 @@
+dependencies:
+  - elasticsearch~=7.0
+  - elasticsearch-dsl~=7.0
+  - numpy
+  - pydantic
+  - pytorch
+  - transformers
+  - pandas
