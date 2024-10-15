@@ -6,7 +6,7 @@ RUN /home/ray/anaconda3/bin/conda env update --name base --file /tmp/environment
 
 # Install Pip packages.
 COPY requirements.txt /tmp/
-RUN /home/ray/anaconda3/bin/pip install -r /tmp/requirements.txt && sleep 3
+RUN /home/ray/anaconda3/bin/pip install -r /tmp/requirements.txt
 
 
 FROM rayproject/ray:2.37.0-gpu AS gpu
@@ -17,6 +17,6 @@ RUN /home/ray/anaconda3/bin/conda env update --name base --file /tmp/environment
 
 # Install Pip packages.
 COPY requirements.txt /tmp/
-RUN /home/ray/anaconda3/bin/pip install -r /tmp/requirements.txt && sleep 3
+RUN /home/ray/anaconda3/bin/pip install -r /tmp/requirements.txt
 
 FROM cpu
