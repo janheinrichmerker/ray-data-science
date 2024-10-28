@@ -9,7 +9,7 @@ USER 1000
 
 # Install Conda packages.
 COPY environment.yml /tmp/
-RUN /home/ray/anaconda3/bin/conda env update --name base --file /tmp/environment.yml
+RUN /home/ray/anaconda3/bin/conda env update --name base --file /tmp/environment.yml --verbose
 
 # Install Pip packages.
 COPY requirements.txt /tmp/
@@ -27,7 +27,7 @@ USER 1000
 
 # Install Conda packages.
 COPY environment.yml /tmp/
-RUN /home/ray/anaconda3/bin/conda env update --name base --file /tmp/environment.yml
+RUN /home/ray/anaconda3/bin/conda env update --name base --file /tmp/environment.yml --verbose
 
 # Install Pip packages.
 COPY requirements.txt /tmp/
