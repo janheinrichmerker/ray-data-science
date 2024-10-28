@@ -7,7 +7,7 @@
 
 # ☀️ ray-data-science
 
-Custom Ray image for data science.
+Custom Ray base image for data science.
 
-Comes with scientific and data processing packages pre-installed via [Conda](./environment.yml) and [Pip](./requirements.txt).
+Comes with JDK and scientific and data processing packages pre-installed via [Conda](./environment.yml) and [Pip](./requirements.txt).
 Feel free to propose a pull request, if you miss an important package.
