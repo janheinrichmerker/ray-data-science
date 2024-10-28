@@ -3,7 +3,7 @@ FROM rayproject/ray:2.37.0-cpu AS cpu
 # Install OpenJDK 11.
 USER 0
 RUN apt-get update && \
-    apt-get install -y openjdk-11-jre-headless && \
+    apt-get install -y openjdk-11-jdk && \
     apt-get clean
 USER 1000
 
@@ -21,7 +21,7 @@ FROM rayproject/ray:2.37.0-gpu AS gpu
 # Install OpenJDK 11.
 USER 0
 RUN apt-get update && \
-    apt-get install -y openjdk-11-jre-headless && \
+    apt-get install -y openjdk-11-jdk && \
     apt-get clean
 USER 1000
 
