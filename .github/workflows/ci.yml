@@ -15,8 +15,6 @@ jobs:
           - cpu
           - gpu
     steps:
-    - name: 📥 Back-up Docker
-      run: sudo mv /var/lib/docker/ "${GITHUB_WORKSPACE}/docker"
     - name: 💾 Maximize build space
       uses: easimon/maximize-build-space@v10
       with:
@@ -28,8 +26,8 @@ jobs:
         remove-haskell: 'true'
         remove-codeql: 'true'
         build-mount-path: /var/lib/docker/
-    - name: 📤 Restore Docker
-      run: sudo sh -c "mv ${GITHUB_WORKSPACE}/docker/* /var/lib/docker"
+    - name: 🔃 Restart Docker
+      run: sudo service docker restart
     - name: 📥 Check-out
       uses: actions/checkout@v4
     - name: 🧰 Set up QEMU
@@ -58,8 +56,6 @@ jobs:
           - cpu
           - gpu
     steps:
-    - name: 📥 Back-up Docker
-      run: sudo mv /var/lib/docker/ "${GITHUB_WORKSPACE}/docker"
     - name: 💾 Maximize build space
       uses: easimon/maximize-build-space@v10
       with:
@@ -71,8 +67,8 @@ jobs:
         remove-haskell: 'true'
         remove-codeql: 'true'
         build-mount-path: /var/lib/docker/
-    - name: 📤 Restore Docker
-      run: sudo sh -c "mv ${GITHUB_WORKSPACE}/docker/* /var/lib/docker"
+    - name: 🔃 Restart Docker
+      run: sudo service docker restart
     - name: 📥 Check-out
       uses: actions/checkout@v4
     - name: 🧰 Set up QEMU
