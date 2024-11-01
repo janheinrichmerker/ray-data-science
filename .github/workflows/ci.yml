@@ -22,7 +22,7 @@ jobs:
         remove-android: 'true'
         remove-haskell: 'true'
         remove-codeql: 'true'
-        root-reserve-mb: 35000
+        root-reserve-mb: 50000
         swap-size-mb: 1024
     - name: 📥 Check-out
       uses: actions/checkout@v4
@@ -59,7 +59,7 @@ jobs:
         remove-android: 'true'
         remove-haskell: 'true'
         remove-codeql: 'true'
-        root-reserve-mb: 35000
+        root-reserve-mb: 50000
         swap-size-mb: 1024
     - name: 📥 Check-out
       uses: actions/checkout@v4
