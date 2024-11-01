@@ -26,8 +26,10 @@ RUN apt-get update && \
 USER 1000
 
 # Install Conda packages.
-COPY environment.yml environment-gpu.yml /tmp/
-RUN /home/ray/anaconda3/bin/conda env update --name base --file /tmp/environment.yml --file /tmp/environment-gpu.yml --verbose
+COPY environment.yml /tmp/
+RUN /home/ray/anaconda3/bin/conda env update --name base --file /tmp/environment.yml --verbose
+COPY environment-gpu.yml /tmp/
+RUN /home/ray/anaconda3/bin/conda env update --name base --file /tmp/environment-gpu.yml --verbose
 
 # Install Pip packages.
 COPY requirements.txt /tmp/
