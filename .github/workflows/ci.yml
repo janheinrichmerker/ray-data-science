@@ -18,12 +18,14 @@ jobs:
     - name: 💾 Maximize build space
       uses: easimon/maximize-build-space@v10
       with:
+        root-reserve-mb: 512
+        temp-reserve-mb: 32
+        swap-size-mb: 32
         remove-dotnet: 'true'
         remove-android: 'true'
         remove-haskell: 'true'
         remove-codeql: 'true'
-        root-reserve-mb: 50000
-        swap-size-mb: 1024
+        build-mount-path: /var/lib/docker/
     - name: 📥 Check-out
       uses: actions/checkout@v4
     - name: 🧰 Set up QEMU
@@ -55,12 +57,14 @@ jobs:
     - name: 💾 Maximize build space
       uses: easimon/maximize-build-space@v10
       with:
+        root-reserve-mb: 512
+        temp-reserve-mb: 32
+        swap-size-mb: 32
         remove-dotnet: 'true'
         remove-android: 'true'
         remove-haskell: 'true'
         remove-codeql: 'true'
-        root-reserve-mb: 50000
-        swap-size-mb: 1024
+        build-mount-path: /var/lib/docker/
     - name: 📥 Check-out
       uses: actions/checkout@v4
     - name: 🧰 Set up QEMU
