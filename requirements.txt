@@ -11,4 +11,4 @@ python-terrier~=0.11.0
 pyyaml~=6.0
 resiliparse~=0.14.9
 torch~=2.4
-transformers~=4.45
+transformers~=4.46
