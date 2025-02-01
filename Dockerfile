@@ -1,4 +1,4 @@
-FROM rayproject/ray:2.39.0-cpu AS cpu
+FROM rayproject/ray:2.41.0-cpu AS cpu
 
 # Install OpenJDK 11.
 USER 0
@@ -16,7 +16,7 @@ COPY requirements.txt /tmp/
 RUN /home/ray/anaconda3/bin/pip install -r /tmp/requirements.txt
 
 
-FROM rayproject/ray:2.39.0-gpu AS gpu
+FROM rayproject/ray:2.41.0-gpu AS gpu
 
 # Install OpenJDK 11.
 USER 0
