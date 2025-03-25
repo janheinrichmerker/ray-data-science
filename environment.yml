@@ -10,4 +10,7 @@ dependencies:
   - conda-forge::python-dotenv~=1.0
   - pytorch::pytorch~=2.4
   - conda-forge::pyyaml~=6.0
+  - conda-forge::spacy~=3.7.1
+  - conda-forge::spacy-model-en_core_web_lg~=3.7.1
+  - conda-forge::spacy-model-en_core_web_sm~=3.7.1
   - conda-forge::transformers~=4.45
