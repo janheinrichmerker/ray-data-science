@@ -12,3 +12,5 @@ pyyaml~=6.0
 resiliparse~=0.15.1
 torch~=2.6
 transformers~=4.49
+en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1-py3-none-any.whl
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
