@@ -1,4 +1,4 @@
-datasets~=3.5
+datasets~=4.0
 elasticsearch~=7.0
 elasticsearch-dsl~=7.4
 en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0-py3-none-any.whl
